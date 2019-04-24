@@ -42,6 +42,11 @@
 
 <script>
 export default {
-  props: ['selection']
+  props: {
+    selection: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
