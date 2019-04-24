@@ -66,10 +66,14 @@ export default {
   },
 
   generate: {
-    routes: [
-      '/news/1',
-      '/news/2',
-      '/news/3'
-    ]
+    routes() {
+      return new Promise(resolve => {
+        return resolve([
+          { route: '/news/1', payload: { id: 1, title: 'Hello' } },
+          { route: '/news/2', payload: { id: 2, title: 'World' } },
+          { route: '/news/3', payload: { id: 3, title: 'Salt' } }
+        ])
+      })
+    }
   }
 }
