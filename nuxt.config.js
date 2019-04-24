@@ -63,5 +63,13 @@ export default {
         })
       }
     }
+  },
+
+  generate: {
+    routes: [
+      '/news/1',
+      '/news/2',
+      '/news/3'
+    ]
   }
 }
