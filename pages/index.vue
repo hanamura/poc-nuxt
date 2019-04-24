@@ -1,16 +1,3 @@
 <template>
-  <div>
-    <Header selection="/" />
-    <h1>Home</h1>
-  </div>
+  <h1>Home</h1>
 </template>
-
-<script>
-import Header from '~/components/Header.vue'
-
-export default {
-  components: {
-    Header
-  }
-}
-</script>

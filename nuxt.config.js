@@ -75,5 +75,10 @@ export default {
         ])
       })
     }
+  },
+
+  router: {
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-exact-active'
   }
 }

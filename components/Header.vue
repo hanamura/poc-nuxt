@@ -1,15 +1,9 @@
 <template>
   <header class="header">
     <ul>
-      <li :class="{ 'is-selected': selection === '/' }">
-        <nuxt-link to="/">Home</nuxt-link>
-      </li>
-      <li :class="{ 'is-selected': selection === '/about' }">
-        <nuxt-link to="/about">About</nuxt-link>
-      </li>
-      <li :class="{ 'is-selected': selection === '/news' }">
-        <nuxt-link to="/news">News</nuxt-link>
-      </li>
+      <nuxt-link tag="li" to="/" exact><a>Home</a></nuxt-link>
+      <nuxt-link tag="li" to="/about"><a>About</a></nuxt-link>
+      <nuxt-link tag="li" to="/news"><a>News</a></nuxt-link>
     </ul>
   </header>
 </template>
@@ -38,18 +32,7 @@
   text-decoration: none;
 }
 
-.header li.is-selected a {
+.header li.is-active a {
   text-decoration: underline;
 }
 </style>
-
-<script>
-export default {
-  props: {
-    selection: {
-      type: String,
-      default: ''
-    }
-  }
-}
-</script>

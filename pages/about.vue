@@ -1,16 +1,3 @@
 <template>
-  <div>
-    <Header selection="/about" />
-    <h1>About</h1>
-  </div>
+  <h1>About</h1>
 </template>
-
-<script>
-import Header from '~/components/Header.vue'
-
-export default {
-  components: {
-    Header
-  }
-}
-</script>
