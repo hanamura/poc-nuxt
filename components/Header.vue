@@ -1,8 +1,12 @@
 <template>
   <header class="header">
     <ul>
-      <li><nuxt-link to="/">Home</nuxt-link></li>
-      <li><nuxt-link to="/about">About</nuxt-link></li>
+      <li :class="{ 'is-selected': selection === '/' }">
+        <nuxt-link to="/">Home</nuxt-link>
+      </li>
+      <li :class="{ 'is-selected': selection === '/about' }">
+        <nuxt-link to="/about">About</nuxt-link>
+      </li>
     </ul>
   </header>
 </template>
@@ -26,4 +30,18 @@
 .header li + li {
   margin-left: 1em;
 }
+
+.header a {
+  text-decoration: none;
+}
+
+.header li.is-selected a {
+  text-decoration: underline;
+}
 </style>
+
+<script>
+export default {
+  props: ['selection']
+}
+</script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header selection="/about" />
     <h1>About</h1>
   </div>
 </template>
