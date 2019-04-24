@@ -2,7 +2,10 @@
   <div>
     <Header selection="/about" />
     <h1>News Detail</h1>
-    <h2>News ID: {{ $route.params.id }}</h2>
+    <ul>
+      <li>News ID: {{ $route.params.id }}</li>
+      <li>News Title: {{ $route.params.title }}</li>
+    </ul>
   </div>
 </template>
 
