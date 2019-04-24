@@ -7,6 +7,9 @@
       <li :class="{ 'is-selected': selection === '/about' }">
         <nuxt-link to="/about">About</nuxt-link>
       </li>
+      <li :class="{ 'is-selected': selection === '/news' }">
+        <nuxt-link to="/news">News</nuxt-link>
+      </li>
     </ul>
   </header>
 </template>
