@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header selection="/about" />
+    <Header selection="/news" />
     <h1>News Detail</h1>
     <ul>
       <li>News ID: {{ $route.params.id }}</li>
