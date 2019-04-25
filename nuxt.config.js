@@ -1,3 +1,10 @@
+import fs from 'fs'
+import path from 'path'
+import util from 'util'
+
+import glob from 'glob'
+import yaml from 'js-yaml'
+
 import pkg from './package'
 
 export default {
@@ -62,18 +69,25 @@ export default {
           exclude: /(node_modules)/
         })
       }
+
+      config.module.rules.push({
+        test: /\.ya?ml$/,
+        use: 'js-yaml-loader'
+      })
     }
   },
 
   generate: {
-    routes() {
-      return new Promise(resolve => {
-        return resolve([
-          { route: '/news/1', payload: { id: 1, title: 'Hello' } },
-          { route: '/news/2', payload: { id: 2, title: 'World' } },
-          { route: '/news/3', payload: { id: 3, title: 'Salt' } }
-        ])
-      })
+    async routes() {
+      const files = await util.promisify(glob)('content/news/posts/*.yml')
+      const routes = []
+      for (const file of files) {
+        const yamlStr = await util.promisify(fs.readFile)(file, 'utf8')
+        const yamlObj = yaml.safeLoad(yamlStr)
+        const basename = path.basename(file, path.extname(file))
+        routes.push({ route: `/news/${basename}`, payload: yamlObj })
+      }
+      return routes
     }
   },
 
