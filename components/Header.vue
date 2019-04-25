@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <h1>POC Nuxt</h1>
     <ul>
       <nuxt-link tag="li" to="/" exact><a>Home</a></nuxt-link>
       <nuxt-link tag="li" to="/about"><a>About</a></nuxt-link>
@@ -8,15 +9,21 @@
   </header>
 </template>
 
-<style>
+<style scoped>
 .header {
+  align-items: baseline;
   background: #eee;
+  display: flex;
   padding: 1em;
+}
+
+.header h1 {
+  margin: 0;
 }
 
 .header ul {
   display: flex;
-  margin: 0;
+  margin: 0 0 0 2em;
   padding: 0;
 }
 
