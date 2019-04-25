@@ -15,7 +15,14 @@
 export default {
   asyncData() {
     const context = require.context('~/content/news/posts', false, /^.*.yml$/)
-    return { posts: context.keys().map(key => context(key)) }
+    const posts = context.keys().map(key => {
+      const post = context(key)
+      return {
+        title: post.title,
+        slug: post.slug
+      }
+    })
+    return { posts: posts.slice(0, 3) }
   }
 }
 </script>
