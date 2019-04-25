@@ -2,8 +2,18 @@
   <div>
     <h1>News Detail</h1>
     <ul>
-      <li>News Date: {{ date }}</li>
-      <li>News Title: {{ title }}</li>
+      <li>
+        News Slug: <code>{{ slug }}</code>
+      </li>
+      <li>
+        News Title: <code>{{ title }}</code>
+      </li>
+      <li>
+        News Date: <code>{{ date }}</code>
+      </li>
+      <li>
+        News Body: <code>{{ body }}</code>
+      </li>
     </ul>
   </div>
 </template>
