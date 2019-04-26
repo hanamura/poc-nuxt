@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <nuxt />
+    <main><nuxt /></main>
   </div>
 </template>
 
@@ -13,6 +13,10 @@ html {
 
 body {
   margin: 0;
+}
+
+main {
+  padding: 1em;
 }
 </style>
 
