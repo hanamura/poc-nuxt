@@ -2,6 +2,7 @@ backend:
   name: git-gateway
 media_folder: 'static/images/uploads'
 public_folder: '/images/uploads'
+site_url: https://hanamura-poc-nuxt.netlify.com
 collections:
   - name: 'news'
     label: 'News'
