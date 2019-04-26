@@ -12,6 +12,9 @@
         News Date: <code>{{ date }}</code>
       </li>
       <li>
+        News Category: <code>{{ category }}</code>
+      </li>
+      <li>
         News Body: <code>{{ body }}</code>
       </li>
     </ul>
