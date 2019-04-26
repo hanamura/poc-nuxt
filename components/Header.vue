@@ -9,7 +9,7 @@
   </header>
 </template>
 
-<style scoped>
+<style>
 .header {
   align-items: baseline;
   background: #eee;
