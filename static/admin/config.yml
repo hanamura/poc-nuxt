@@ -13,7 +13,7 @@ collections:
     format: 'yaml'
     sort: 'date:desc'
     identifier_field: slug
-    summary: '{{year}}/{{month}}/{{date}} {{title}}'
+    summary: '{{year}}/{{month}}/{{day}} {{title}}'
     fields:
       - label: 'Title'
         name: 'title'
