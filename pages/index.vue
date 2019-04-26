@@ -1,13 +1,22 @@
 <template>
   <div>
     <h1>Home</h1>
-    <ul>
-      <li v-for="post in posts" :key="post.slug">
-        <nuxt-link :to="`/news/${post.slug}`">
-          {{ post.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <section>
+      <h1>News</h1>
+      <ul>
+        <li v-for="post in posts" :key="post.slug">
+          <nuxt-link :to="`/news/${post.slug}`">
+            {{ post.title }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Assets</h1>
+      <ul>
+        <li><a href="/export.css">export.css</a></li>
+      </ul>
+    </section>
   </div>
 </template>
 
