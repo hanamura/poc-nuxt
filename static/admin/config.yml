@@ -9,6 +9,7 @@ collections:
     folder: 'content/news/posts'
     create: true
     slug: '{{slug}}'
+    preview_path: 'news/{{slug}}'
     format: 'yaml'
     sort: 'date:desc'
     identifier_field: slug
