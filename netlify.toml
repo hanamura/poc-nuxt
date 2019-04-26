@@ -1,5 +1,5 @@
 [build]
-  command = "npm run generate"
+  command = "npm run deploy"
   publish = "dist"
 
 [context.production.environment]
