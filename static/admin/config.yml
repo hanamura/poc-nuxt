@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+media_folder: 'static/images/uploads'
+public_folder: '/images/uploads'
+collections:
+  - name: 'news'
+    label: 'News'
+    folder: 'content/news/posts'
+    create: true
+    slug: '{{slug}}'
+    format: 'yaml'
+    sort: 'date:desc'
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Slug'
+        name: 'slug'
+        widget: 'string'
+      - label: 'Date'
+        name: 'date'
+        widget: 'datetime'
+        format: 'dddd MMMM Do, YYYY'
+      - label: 'Category'
+        name: 'category'
+        widget: 'select'
+        options:
+          - label: 'Train'
+            value: 'train'
+          - label: 'Bus'
+            value: 'bus'
+          - label: 'Other'
+            value: 'other'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
