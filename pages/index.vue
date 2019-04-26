@@ -3,13 +3,13 @@
     <h1>Home</h1>
     <section>
       <h1>News</h1>
-      <ul>
+      <ol>
         <li v-for="post in posts" :key="post.slug">
           <nuxt-link :to="`/news/${post.slug}`">
-            {{ post.title }}
+            {{ post.date }}: {{ post.title }}
           </nuxt-link>
         </li>
-      </ul>
+      </ol>
     </section>
     <section>
       <h1>Assets</h1>
@@ -35,14 +35,20 @@ export default {
   },
   asyncData() {
     const context = require.context('~/content/news/posts', false, /^.*.yml$/)
-    const posts = context.keys().map(key => {
-      const post = context(key)
-      return {
-        title: post.title,
-        slug: post.slug
-      }
-    })
-    return { posts: posts.slice(0, 3) }
+    const posts = context
+      .keys()
+      .sort()
+      .reverse()
+      .slice(0, 3)
+      .map(key => {
+        const post = context(key)
+        return {
+          title: post.title,
+          slug: post.slug,
+          date: post.date
+        }
+      })
+    return { posts }
   }
 }
 </script>
