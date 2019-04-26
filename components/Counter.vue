@@ -13,7 +13,7 @@
 </style>
 
 <script>
-module.exports = {
+export default {
   data() {
     return { count: 0 }
   },
