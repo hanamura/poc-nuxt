@@ -10,6 +10,7 @@ collections:
     slug: '{{slug}}'
     format: 'yaml'
     sort: 'date:desc'
+    identifier_field: slug
     fields:
       - label: 'Title'
         name: 'title'
