@@ -17,11 +17,22 @@
         <li><a href="/export.css">export.css</a></li>
       </ul>
     </section>
+    <section>
+      <h1>Components</h1>
+      <div>
+        <Counter />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import Counter from '~/components/Counter.vue'
+
 export default {
+  components: {
+    Counter
+  },
   asyncData() {
     const context = require.context('~/content/news/posts', false, /^.*.yml$/)
     const posts = context.keys().map(key => {
