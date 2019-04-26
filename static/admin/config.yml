@@ -24,7 +24,7 @@ collections:
       - label: 'Date'
         name: 'date'
         widget: 'datetime'
-        format: 'dddd MMMM Do, YYYY'
+        format: 'YYYY-MM-DDTHH:mm:ssZ'
       - label: 'Category'
         name: 'category'
         widget: 'select'
